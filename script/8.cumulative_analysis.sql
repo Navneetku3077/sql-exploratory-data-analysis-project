@@ -13,18 +13,19 @@ SQL Functions Used:
 */
 
 --calculate the total sales per month and the running total of sales over time
-select 
-order_date,
-total_sales,
-	sum(total_sales) over (order by order_date) as running_total_sales,
-	avg(avg_price) over (order by order_date) as moving_average_price
-from (
-	select
-		DATEFROMPARTS(YEAR(order_date),1,1) as order_date,
-		sum(sales_amount) as total_sales,
-		avg(price) as avg_price
-	from gold.fact_sales
-	where order_date is not null
-	group by DATEFROMPARTS(YEAR(order_date),1,1)
+SELECT
+	order_date,
+	total_sales,
+	SUM(total_sales) OVER (ORDER BY order_date) AS running_total_sales,
+	AVG(avg_price) OVER (ORDER BY order_date) AS moving_average_price
+FROM
+(
+    SELECT 
+        DATETRUNC(year, order_date) AS order_date,
+        SUM(sales_amount) AS total_sales,
+        AVG(price) AS avg_price
+    FROM gold.fact_sales
+    WHERE order_date IS NOT NULL
+    GROUP BY DATETRUNC(year, order_date)
 ) t
-order by order_date;
+
