@@ -1,4 +1,4 @@
-## <img width="50" height="50" alt="competitor-analysis" src="https://github.com/user-attachments/assets/aaf3488b-25a7-4d75-a263-7053dafd7a16" /> ``Exploratory analytics project (EDA) `` ##
+## <img width="50" height="50" alt="competitor-analysis" src="https://github.com/user-attachments/assets/aaf3488b-25a7-4d75-a263-7053dafd7a16" /> ``Exploratory Data analytics project (EDA) `` ##
 Welcome to the Exploratory Analytics project (EDA) using SQL of a business to understand customer purchasing behavior and identifying the trends and overall sales performance of different products and subcategory. This analysis helps discover meaningful insights about customer demographics , product category and purchasing patterns through these insights business can take better decisions.
 ## <img width="50" height="50" alt="goal" src="https://github.com/user-attachments/assets/5cbcc293-f4e2-4028-b0c8-15cf1fb363d1" /> ``Objective`` ##
 1. Explore the database and understand the available tables and columns.
